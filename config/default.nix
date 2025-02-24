@@ -1,6 +1,7 @@
 _ :
 {
   imports = [
+    ./binds.nix
     ./general.nix
     ./style
     ./languages
