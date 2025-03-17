@@ -7,6 +7,7 @@ _ :
     ./languages
     ./notes
     ./mini.nix
+    ./snacks.nix
   ];
 
   vim = {
