@@ -6,6 +6,7 @@
       setupOpts.signature.enabled = true;
     };
     lsp = {
+      enable = true;
       formatOnSave = true;
       trouble.enable = true;
       lspkind.enable = true;
@@ -33,7 +34,6 @@
     };
     languages = {
       # Options applied to all languages
-      enableLSP = true;
       enableFormat = true;
       enableTreesitter = true;
       enableExtraDiagnostics = true;
