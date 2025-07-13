@@ -9,9 +9,9 @@
       formatOnSave = true;
       trouble.enable = true;
       lspkind.enable = true;
-      lsplines.enable = true; # https://git.sr.ht/~whynothugo/lsp_lines.nvim
       otter-nvim.enable = true;
     };
+    diagnostics.enable = true;
 
     debugger.nvim-dap = {
       enable = true;
