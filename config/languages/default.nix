@@ -21,7 +21,8 @@
 
     treesitter = {
       enable = true;
-      grammars = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+      grammars = builtins.attrValues {
+        inherit (pkgs.vimPlugins.nvim-treesitter.builtGrammars)
         beancount
         ledger
         dockerfile
@@ -30,7 +31,8 @@
         json
         json5
         jsonc
-      ];
+        ;
+      };
     };
     languages = {
       # Options applied to all languages

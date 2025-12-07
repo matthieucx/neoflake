@@ -3,7 +3,8 @@
   ...
 }:
 pkgs.mkShellNoCC {
-  packages = with pkgs; [
+  packages = builtins.attrValues {
+    inherit (pkgs)
     # Nix
     nixd
     alejandra
@@ -11,5 +12,6 @@ pkgs.mkShellNoCC {
     deadnix
     # Tools
     cargo-edit
-  ];
+    ;
+  };
 }
