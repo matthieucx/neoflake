@@ -1,8 +1,4 @@
-{
-  lib,
-  ...
-}:
-{
+{lib, ...}: {
   vim = {
     # https://github.com/echasnovski/mini.nvim?tab=readme-ov-file#modules
     mini = {
@@ -25,20 +21,19 @@
       # Appearance
       hipatterns = {
         enable = true;
-        setupOpts.highlighters =
-          let
-            mkPattern = pattern: "%f[%w]()${pattern}()%f[%W]";
-            mkHi = pattern: group: {
-              inherit group;
-              pattern = mkPattern pattern;
-            };
-          in {
-            todo = mkHi "TODO" "MiniHipatternsTodo";
-            hack = mkHi "HACK" "MiniHipatternsHack";
-            note = mkHi "NOTE" "MiniHipatternsNote";
-            fixme = mkHi "FIXME" "MiniHipatternsFixme";
-            hex_color = lib.generators.mkLuaInline ''require("mini.hipatterns").gen_highlighter.hex_color()'';
+        setupOpts.highlighters = let
+          mkPattern = pattern: "%f[%w]()${pattern}()%f[%W]";
+          mkHi = pattern: group: {
+            inherit group;
+            pattern = mkPattern pattern;
           };
+        in {
+          todo = mkHi "TODO" "MiniHipatternsTodo";
+          hack = mkHi "HACK" "MiniHipatternsHack";
+          note = mkHi "NOTE" "MiniHipatternsNote";
+          fixme = mkHi "FIXME" "MiniHipatternsFixme";
+          hex_color = lib.generators.mkLuaInline ''require("mini.hipatterns").gen_highlighter.hex_color()'';
+        };
       };
       icons.enable = true;
       indentscope.enable = true;

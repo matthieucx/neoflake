@@ -1,5 +1,4 @@
-_ :
-{
+_: {
   imports = [
     ./binds.nix
     ./general.nix

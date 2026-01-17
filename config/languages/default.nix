@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   vim = {
     autocomplete.blink-cmp = {
       enable = true;
@@ -22,16 +21,17 @@
     treesitter = {
       enable = true;
       grammars = builtins.attrValues {
-        inherit (pkgs.vimPlugins.nvim-treesitter.builtGrammars)
-        beancount
-        ledger
-        dockerfile
-        toml
-        yaml
-        json
-        json5
-        jsonc
-        ;
+        inherit
+          (pkgs.vimPlugins.nvim-treesitter.builtGrammars)
+          beancount
+          ledger
+          dockerfile
+          toml
+          yaml
+          json
+          json5
+          jsonc
+          ;
       };
     };
     languages = {
@@ -44,9 +44,9 @@
       # Languages
       nix = {
         enable = true;
-        format.type = "alejandra";
+        format.type = ["alejandra"];
         extraDiagnostics.types = ["statix" "deadnix"];
-        lsp.server = "nixd";
+        lsp.servers = ["nixd"];
       };
       markdown = {
         enable = true;
@@ -55,12 +55,12 @@
       };
       python = {
         enable = true;
-        format.type = "ruff";
-        lsp.server = "basedpyright";
+        format.type = ["ruff"];
+        lsp.servers = ["basedpyright"];
       };
       rust = {
         enable = true;
-        crates.enable = true;
+        extensions.crates-nvim.enable = true;
       };
       typst = {
         enable = true;
@@ -72,6 +72,6 @@
       html.enable = true;
       css.enable = true;
       lua.enable = true;
-      };
     };
+  };
 }

@@ -29,14 +29,14 @@
       neovim =
         (nvf.lib.neovimConfiguration {
           modules = [configModule];
-          pkgs = import nixpkgs { inherit system; };
+          pkgs = import nixpkgs {inherit system;};
         })
         .neovim;
     });
 
     devShells = forAllSystems (system: {
       default = import ./devshell.nix {
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = import nixpkgs {inherit system;};
       };
     });
   };

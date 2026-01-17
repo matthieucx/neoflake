@@ -1,5 +1,4 @@
-_ :
-{
+_: {
   vim = {
     theme = {
       enable = true;

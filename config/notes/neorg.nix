@@ -1,5 +1,4 @@
-_ :
-{
+_: {
   vim.notes.neorg = {
     # TODO: Temp, see https://github.com/NotAShelf/nvf/issues/955
     enable = false;

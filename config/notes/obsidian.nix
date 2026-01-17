@@ -1,5 +1,4 @@
-_ :
-let
+_: let
   vault_path = "Documents/ObsidianVault";
 in {
   vim.notes.obsidian = {

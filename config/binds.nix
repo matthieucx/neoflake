@@ -1,5 +1,4 @@
-_ :
-{
+_: {
   vim.binds = {
     whichKey.enable = true;
   };

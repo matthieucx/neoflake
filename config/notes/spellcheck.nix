@@ -1,5 +1,4 @@
-_ :
-{
+_: {
   vim.spellcheck = {
     enable = true;
     languages = ["fr" "en"];

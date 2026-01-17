@@ -1,5 +1,4 @@
-_ :
-{
+_: {
   # https://github.com/NotAShelf/nvf/pull/712
   vim.utility.snacks-nvim = {
     enable = true;
