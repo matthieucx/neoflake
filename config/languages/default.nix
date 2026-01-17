@@ -30,7 +30,6 @@
           yaml
           json
           json5
-          jsonc
           ;
       };
     };
